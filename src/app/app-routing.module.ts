@@ -1,4 +1,5 @@
-import { Routes} from '@angular/router';
+import { Routes } from '@angular/router';
+
 import { MainComponent } from './main/main.component';
 import { CartComponent } from './cart/cart.component';
 import { AboutComponent } from './about/about.component';

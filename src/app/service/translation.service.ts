@@ -13,9 +13,7 @@ export class TranslationService {
     public languages = ['ru', 'eng'];
 
     public language = 'eng';
-
-    public languageSave = [];
-
+    
     private dictionary: {[key: string]: TranslationSet} = {
         'ru' : {
             languange: 'ru',
@@ -84,32 +82,24 @@ export class TranslationService {
 
     constructor(private cartService: CartService) { }
 
-    check(){
-        let languageArr = [];
-        
-        if( this.language === 'eng' ){
-            if( this.languageSave[0] === 'ru'){
-                languageArr[0] = 'eng';
-                localStorage.setItem('language', JSON.stringify(languageArr));
-            }
-        } else {
-            languageArr[0] = 'ru';
-            localStorage.setItem('language', JSON.stringify(languageArr));
-        }
-        this.languageSave = JSON.parse(localStorage.getItem('language'));
-        this.language = this.languageSave[0];
-        
+    check(text: any){
+        localStorage.setItem('language', JSON.stringify(text));
+    }
+
+    fixed(){
+        String(JSON.parse(localStorage.getItem('language'))) !== 'undefined' ? this.language = JSON.parse(localStorage.getItem('language')) : false;
+        this.language === null ? this.language = 'eng' : false;
     }
 
     translate(value: string): string {
-        this.check();
-        if(this.languageSave[0] === 'ru'){
+        this.fixed();
+        if(this.language === 'ru'){
             this.cartService.flagAceptChange();
         } else {
             this.cartService.flagAcept = false;
         }
-        if ( this.dictionary[this.languageSave[0]] != null ) {
-            return this.dictionary[this.languageSave[0]].values[value];
+        if ( this.dictionary[this.language] != null ) {
+            return this.dictionary[this.language].values[value];
         }
     }
 }

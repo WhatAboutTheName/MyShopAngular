@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
-import { RouterModule}  from '@angular/router';
-import { appRoutes } from './app-routing.module';
+import { Routes, RouterModule}  from '@angular/router';
+//import { appRoutes } from './app-routing.module';
 
 import {HttpClientModule} from '@angular/common/http';
 
@@ -35,6 +35,14 @@ import {AnimationService} from './service/animation.service';
 import { TranslatePipe } from './translation/translate.pipe';
 import { ChangeLanguageComponent } from './change-language/change-language.component';
 import { ScrollTopComponent } from './main/scroll-top/scroll-top.component';
+
+const appRoutes: Routes = [
+  { path: '', component: MainComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'label', component: CategoriesContentComponent },
+  { path: '**', component: NotFoundComponent }
+];
 
 @NgModule({
   declarations: [

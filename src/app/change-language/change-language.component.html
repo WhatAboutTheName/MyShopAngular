@@ -1,5 +1,5 @@
 <div class="language">
-    <select [(ngModel)]="translationService.language">
-      <option *ngFor="let language of translationService.languages" [(ngValue)]="language">{{language}}</option>
+    <select [(ngModel)]="translationService.language" #language (click)="change()">
+      <option *ngFor="let language of translationService.languages">{{language}}</option>
     </select>
 </div>
