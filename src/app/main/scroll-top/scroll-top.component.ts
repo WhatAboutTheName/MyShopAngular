@@ -11,7 +11,6 @@ export class ScrollTopComponent implements OnInit {
   constructor(private animationService: AnimationService) { }
 
   ngOnInit() {
-    
   }
 
   ngAfterContentChecked(){
