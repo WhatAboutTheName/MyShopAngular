@@ -1,0 +1,11 @@
+<img class='img-p' [src]="getImageUrl()"/>
+<div class="product-info">
+<h3 class='label'>{{jacket.label}}</h3>
+    <div class="product-i">
+        <h4>{{'MEN’S' | translate}}</h4>
+        <strong class="price">${{jacket.price}}</strong>
+        <input type="number" class="input-amount" [(ngModel)]="amount">
+        <button (click)="addProduct()" type="button" class="add-cart" id='{{jacket.id}}'>{{'In cart' | translate}}</button>
+    </div>
+</div>
+

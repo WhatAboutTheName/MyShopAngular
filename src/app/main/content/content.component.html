@@ -1,0 +1,8 @@
+<div class="products">
+   <ul>
+        <li *ngFor="let jacket of contentService.jackets">
+            <app-jacket [jacket]="jacket" (add)="addProduct($event)"></app-jacket>
+        </li>
+    </ul>
+</div>
+<app-alerts *ngIf="contentService.falagAlert"></app-alerts>

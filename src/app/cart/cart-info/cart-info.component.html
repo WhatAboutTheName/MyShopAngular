@@ -1,0 +1,15 @@
+<div class="cart-info">
+  <h1>{{'Your order' | translate}}</h1>
+  <div class="cart-info-price">
+      <h4>{{'In the cart' | translate}}:</h4>
+      <h3>{{cartService.allAmount}}</h3>
+      <h4>{{'All Price' | translate}}:</h4>
+      <h3>${{cartService.allPrice}}</h3>
+  </div>
+  <div class="button">
+      <button type="button" class="place-cart" (click)="cancel()">{{'PlaceOrder' | translate}}</button>
+      <button type="button" class="remove-all" (click)="removeAll()">{{'Delete all' | translate}}</button>
+  </div>
+</div>
+
+<app-order *ngIf="cartService.flagOrder"></app-order>

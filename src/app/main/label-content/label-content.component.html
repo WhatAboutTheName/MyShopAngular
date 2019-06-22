@@ -1,0 +1,7 @@
+<div class="products">
+  <ul>
+      <li *ngFor="let jacket of contentService.productLabel">
+        <app-label-jacket [jacket]="jacket" (add)="addProduct($event)"></app-label-jacket>
+    </li>
+  </ul>
+</div>

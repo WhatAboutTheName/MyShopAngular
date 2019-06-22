@@ -1,0 +1,100 @@
+.plase-order {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 500px;
+    line-height: 60px;
+    height: 350px;
+    margin-left: -100px;
+    margin-top: -30px;
+    background-color: #dedede;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 10; 
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
+    
+    h4{
+        padding: 5px;
+        background: #8b0000;
+        color: #fff;
+        border-radius: 10px 10px 0px 0px;
+        font-size: 30pt;
+    }
+        
+    .enter{
+        height: 210px;
+
+        h3{
+            height: 40px;
+            color: #808080;
+        }
+        
+        .user-name{
+            width: 320px;
+            height: 25px;
+            font-size: 110%; 
+        }
+        
+        .phone-number{
+            width: 320px;
+            height: 25px;
+            font-size: 110%; 
+        }
+
+        .alert-danger{
+            margin-left: 88px;
+            margin-top: -14px;
+            z-index: 10; 
+            background-color: #f07c7c31;
+            position: fixed;
+            width: 320px;
+            height: 30px;
+            border-radius: 10px 10px 10px 10px;
+            border: 2px solid rgb(192, 9, 9);
+
+            h3{
+                margin-top: -19px;
+                color: #1b1a1a;
+            }
+        }
+        
+    }
+    .button { 
+        button{
+            width: 80px;
+            height: 32px;
+            background-color: #8b0000;
+            border: 10px;
+            cursor: pointer;
+            color: #fff;
+            border-radius: 10px 10px 10px 10px;
+        }
+        
+        input{
+            width: 80px;
+            height: 32px;
+            background-color: #8b0000;
+            border: 10px;
+            cursor: pointer;
+            color: #fff;
+            border-radius: 10px 10px 10px 10px;
+        }
+    }
+}
+
+.add-alerts{
+    background-color: #ffffff;
+    left: 10px;
+    bottom: 50px;
+    position: fixed;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid rgb(192, 9, 9);
+
+    h4{
+        text-align: center;
+        margin-top: 35px;
+        font-family: Arial;
+    }
+}

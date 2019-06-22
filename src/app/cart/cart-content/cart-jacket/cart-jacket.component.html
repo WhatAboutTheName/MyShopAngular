@@ -1,0 +1,14 @@
+<li> 
+    <img [src]="getImageUrl()"/>
+  <div class="cart-product-info">
+    <h3 class='cart-label'>{{jacket.label}}</h3>
+    <div class="cart-product-i">
+        <h4 *ngIf="!cartService.flagChange">{{'Amount' | translate}}:{{jacket.amount}}</h4>
+        <input type="number" name="amount" class="change-input" *ngIf="cartService.flagChange" [(ngModel)]="amount">
+        <strong class="cart-price">{{'Price' | translate}}{{jacket.amount * jacket.price}}</strong>
+        <button type="button" class="remove-cart" id='{{jacket.id}}' (click)="remove(jacket.id)">{{'Delete' | translate}}</button>
+        <button type="button" class="change" id='{{jacket.id}}' *ngIf="!cartService.flagChange" (click)="apply()">{{'Change' | translate}}</button>
+        <button type="button" class="change" id='{{jacket.id}}' *ngIf="cartService.flagChange" (click)="apply()">{{'Apply' | translate}}</button>
+    </div>
+  </div>
+</li>

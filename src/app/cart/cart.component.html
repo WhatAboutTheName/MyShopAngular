@@ -1,0 +1,10 @@
+<div id="main">
+    <div *ngIf='cartService.flagAll'>
+        <app-cart-info></app-cart-info>
+        <app-cart-content></app-cart-content>
+    </div>
+    <div id="main-cart" *ngIf='!cartService.flagAll'>
+        <div class="ag">&nbsp;</div>
+        <div id="no-product"><h4>{{'Empty cart' | translate}}</h4></div>
+    </div>
+</div>

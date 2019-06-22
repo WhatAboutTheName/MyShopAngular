@@ -1,18 +1,82 @@
+import {Routes, RouterModule} from '@angular/router';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CategoriesComponent } from './main/categories/categories.component';
+import { ContentComponent } from './main/content/content.component';
+import { HeaderComponent } from './header/header.component';
+
+import {HttpClientModule} from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
+import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { MainComponent } from './main/main.component';
+import { CartInfoComponent } from './cart/cart-info/cart-info.component';
+import { CartContentComponent } from './cart/cart-content/cart-content.component';
+import { CategoriesContentComponent } from './main/categories-content/categories-content.component';
+import { JacketComponent } from './main/jacket/jacket.component';
+import { LabelContentComponent } from './main/label-content/label-content.component';
+import { LabelJacketComponent } from './main/label-jacket/label-jacket.component';
+import { OrderComponent } from './cart/cart-info/order/order.component';
+import { CartJacketComponent } from './cart/cart-content/cart-jacket/cart-jacket.component';
+import { AlertsComponent } from './alerts/alerts.component';
+
+import {ContentService} from './service/content.service';
+import {CartService} from './service/cart.service';
+import {TranslationService} from './service/translation.service';
+import {AnimationService} from './service/animation.service';
+
+import { TranslatePipe } from './translation/translate.pipe';
+import { ChangeLanguageComponent } from './change-language/change-language.component';
+import { ScrollTopComponent } from './main/scroll-top/scroll-top.component';
+
+
+const appRoutes: Routes =[
+    { path: '', component: MainComponent },
+    { path: 'cart', component: CartComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'label', component: CategoriesContentComponent },
+    { path: '**', component: NotFoundComponent }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CategoriesComponent,
+    ContentComponent,
+    HeaderComponent,
+    CartComponent,
+    AboutComponent,
+    NotFoundComponent,
+    MainComponent,
+    CartInfoComponent,
+    CartContentComponent,
+    CategoriesContentComponent,
+    JacketComponent,
+    LabelContentComponent,
+    LabelJacketComponent,
+    OrderComponent,
+    CartJacketComponent,
+    AlertsComponent,
+    TranslatePipe,
+    ChangeLanguageComponent,
+    ScrollTopComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    ContentService,
+    CartService,
+    TranslationService,
+    AnimationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

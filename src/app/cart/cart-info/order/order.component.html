@@ -1,0 +1,21 @@
+<div class="plase-order">
+    <form name="myForm">
+        <h4>{{'PlaceOrder' | translate}}</h4>
+        <div class="enter">
+            <h3>{{'EnterName' | translate}}</h3>
+            <input type="text/scss"  name="user name" required pattern = "[A-z]{2,} || [А-я]{2,}" [(ngModel)]="user.name" #name="ngModel" title = "Enter your name" class="user-name">
+            <div [hidden]="name.valid || name.untouched" class="alert-danger">
+                <h3>{{'IncorrectName' | translate}}</h3>
+            </div>
+            <h3>{{'EnterNumber' | translate}}</h3>
+            <input type="Text"  name="phone number" required pattern = "[0-9]{10}" [(ngModel)]="user.phone" #phone="ngModel" title = "Enter your phone number with the code" class="phone-number">
+            <div [hidden]="phone.valid || phone.untouched" class="alert-danger">
+                <h3>{{'WrongNumber' | translate}}</h3>
+            </div>
+        </div>
+        <div class="button">
+            <input type="submit" name="submit order" class="submit-order" value="{{'acept' | translate}}" (click)="acept()" [disabled]="name.invalid || phone.invalid">
+            <button type="button" class="cancel" (click)="cancel()">{{'cancel' | translate}}</button>
+        </div>
+    </form>
+</div>

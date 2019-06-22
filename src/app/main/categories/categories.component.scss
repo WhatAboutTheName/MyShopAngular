@@ -1,0 +1,32 @@
+.box-categories {
+    float: left;
+    border: solid 1px #dedede;
+    margin-left: 100px;
+    width: 180px;
+    border-radius: 4px 4px 15px 15px;
+
+    h2{
+        padding: 5px;
+        background: #8b0000;
+        color: #fff;
+        border-radius: 4px 4px 0px 0px;
+    }
+}
+
+.box-content-categ ul {
+    list-style-type: none;
+    font-size: 19px;
+
+    li {
+        border-top: solid 1px #ccc;
+        padding: 5px 0;
+
+        a {
+            padding: 20px;
+            color: #808080;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+}
