@@ -1,11 +1,11 @@
 <div id="header">
-    <h1 id="home"><a href="/">My shop</a></h1>	
+    <h1 id="home"><a routerLink="/">My shop</a></h1>	
     
     <div id="navigation">
         <ul>
-            <li><a href="/">{{'product' | translate}}</a></li>
-            <li><a href="cart">{{'cart' | translate}}</a></li>
-            <li><a href="about">{{'about us' | translate}}</a></li>
+            <li><a routerLink="/">{{'product' | translate}}</a></li>
+            <li><a routerLink="/cart">{{'cart' | translate}}</a></li>
+            <li><a routerLink="/about">{{'about us' | translate}}</a></li>
         </ul>
         <app-change-language></app-change-language>
     </div>

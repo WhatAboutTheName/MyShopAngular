@@ -3,8 +3,8 @@
 	<h2>{{'Categories' | translate}}</h2>
 	<div class="box-content-categ">
 		<ul id="labels" >
-            <li *ngFor="let label of contentService.allLabels" (click)="getLabelContent(label)">
-                <a href="label">
+            <li *ngFor="let label of contentService.allLabels" (click)="getLabelContent(label)" routerLink="/label">
+                <a>
                     {{label}}
                 </a>
             </li>

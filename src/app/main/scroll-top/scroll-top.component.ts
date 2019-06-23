@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AnimationService} from '../../service/animation.service';
+import {ScrollService} from '../../service/scroll.service';
 
 @Component({
   selector: 'app-scroll-top',
@@ -8,17 +8,17 @@ import {AnimationService} from '../../service/animation.service';
 })
 export class ScrollTopComponent implements OnInit {
 
-  constructor(private animationService: AnimationService) { }
+  constructor(private scrollService: ScrollService) { }
 
   ngOnInit() {
   }
 
   ngAfterContentChecked(){
-    this.animationService.addScrollButton();
+    this.scrollService.addScrollButton();
   }
 
   scrollTop(){
-    this.animationService.scrollTop();
+    this.scrollService.scrollTop();
   }
   
 }

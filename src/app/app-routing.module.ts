@@ -7,10 +7,9 @@ import { CategoriesContentComponent } from './main/categories-content/categories
 import { NotFoundComponent } from './not-found/not-found.component';
 
 export const appRoutes: Routes = [
-  { path: '', component: MainComponent },
+  { path: '', component: MainComponent, data: { animation: 'Main' }},
   { path: 'cart', component: CartComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'label', component: CategoriesContentComponent },
+  { path: 'about', component: AboutComponent, data: { animation: 'About' } },
+  { path: 'label', component: CategoriesContentComponent, data: { animation: 'Label' } },
   { path: '**', component: NotFoundComponent }
 ];
-

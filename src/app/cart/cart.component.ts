@@ -11,9 +11,10 @@ export class CartComponent implements OnInit {
   constructor(private cartService: CartService) { }
 
   ngOnInit() {
+    this.cartService.start();
   }
 
-  ngDoCheck(){
+  ngAfterViewChecked(){
     this.cartService.start();
   }
 

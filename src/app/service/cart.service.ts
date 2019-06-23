@@ -6,16 +6,17 @@ export class CartService{
     flagChange = false;
     flagOrder = false;
     flagCategories = false;
-    flagAll = true;
+    flagAll = false;
     flagAcept = false;
 
     start(){
-        if(localStorage.getItem('cart') === null){
-            this.flagAll = false;
+        if(localStorage.getItem('cart') !== null){
+            this.flagAll = true;
         }
     }
 
     addContent(){
+        this.cartHtmlObj =  [];
         if(localStorage.getItem('cart') != null){
             let createJson = JSON.parse(localStorage.getItem('cart'));
             for (let el of createJson) {
@@ -90,5 +91,6 @@ export class CartService{
         this.allPrice = 0;
         this.allAmount = 0;
         this.flagAll = !this.flagAll;
+    
     }
 }

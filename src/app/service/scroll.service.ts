@@ -1,5 +1,4 @@
-export class AnimationService{
-
+export class ScrollService{
     addScrollButton(){
         window.onscroll = function(){
             if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
@@ -9,10 +8,8 @@ export class AnimationService{
             }
         }
     }
-
     scrollTop(){
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
-
 }

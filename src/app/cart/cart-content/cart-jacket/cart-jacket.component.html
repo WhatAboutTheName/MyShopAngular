@@ -1,4 +1,3 @@
-<li> 
     <img [src]="getImageUrl()"/>
   <div class="cart-product-info">
     <h3 class='cart-label'>{{jacket.label}}</h3>
@@ -11,4 +10,3 @@
         <button type="button" class="change" id='{{jacket.id}}' *ngIf="cartService.flagChange" (click)="apply()">{{'Apply' | translate}}</button>
     </div>
   </div>
-</li>

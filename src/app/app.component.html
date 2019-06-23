@@ -1,4 +1,4 @@
-<div class="all">
-    <app-header></app-header>
-    <router-outlet></router-outlet>
+<app-header></app-header>
+<div class="all" [@routeAnimations]="routState(outlet)">
+    <router-outlet #outlet = 'outlet'></router-outlet>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from '../service/content.service';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  constructor(private contentService: ContentService) { }
 
-  ngOnInit() {
+  ngOnInit(){
+  }
+
+  getLabelContent(label: string){
+    this.contentService.getLabelContent(label);
   }
 
 }

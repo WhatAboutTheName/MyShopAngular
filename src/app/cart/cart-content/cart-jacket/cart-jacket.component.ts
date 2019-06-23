@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {CartService} from '../../../service/cart.service';
 import { Jacket } from '../../../interfaces/jacket.interface';
+import { ContentService } from 'src/app/service/content.service';
 
 @Component({
   selector: 'app-cart-jacket',
@@ -9,7 +10,7 @@ import { Jacket } from '../../../interfaces/jacket.interface';
 })
 export class CartJacketComponent implements OnInit {
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private contentService: ContentService) { }
 
   @Input() jacket: Jacket;
   @Output() add = new EventEmitter();
@@ -24,6 +25,7 @@ export class CartJacketComponent implements OnInit {
 
   remove(id: number){
     this.cartService.remove(id);
+    this.contentService.remove(id);
   }
 
   apply(){

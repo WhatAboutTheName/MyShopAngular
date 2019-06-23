@@ -1,5 +1,4 @@
 import { Jacket } from '../interfaces/jacket.interface';
-import { delay } from 'q';
 
 export class ContentService{
 
@@ -15,7 +14,7 @@ export class ContentService{
 
     alert(){
         this.falagAlert = true;
-        setTimeout( t =>  this.falagAlert = false, 1000)
+        setTimeout( t =>  this.falagAlert = false, 1000);
     }
 
     addProduct(id: number, amount: number){
@@ -54,21 +53,30 @@ export class ContentService{
                  labels.push(jacket.label);
             }
              return labels;
-         }, []);
+        }, []);
     }
 
-    getLabelContent(label?: string){
+    getLabelContent(label: string){
         this.productLabel = this.jackets.filter(jacket => jacket.label === label);
         localStorage.setItem('label', JSON.stringify(this.productLabel));
     }
 
     addContent(){
         if(localStorage.getItem('label') != null){
+            this.productLabel = [];
             let createJson = JSON.parse(localStorage.getItem('label'));
             for (let el of createJson) {
                 this.productLabel.push(el);
             }
         }  
+    }
+
+    remove(id: number){
+        this.product = this.product.filter(prod => prod.id !== id);
+    }
+
+    removeAll(){
+        this.product = [];
     }
      
 }

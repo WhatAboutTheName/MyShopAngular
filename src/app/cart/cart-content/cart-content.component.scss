@@ -1,7 +1,18 @@
 .product-in-cart{
-
     float: right;
     width: 800px;
+
+    li { 
+        position: relative;
+        margin: 5px;
+        padding: 1px;
+        border: solid 1px #dedede;
+        float: left;
+        width: 190px;
+        height: 260px;
+        overflow: hidden; 
+        border-radius: 20px 10px 5px 0;
+    }   
 
 }
 

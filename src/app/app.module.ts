@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
-import { Routes, RouterModule}  from '@angular/router';
-//import { appRoutes } from './app-routing.module';
+import { RouterModule }  from '@angular/router';
+import { appRoutes } from './app-routing.module';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './main/categories/categories.component';
@@ -30,19 +32,11 @@ import { AlertsComponent } from './alerts/alerts.component';
 import {ContentService} from './service/content.service';
 import {CartService} from './service/cart.service';
 import {TranslationService} from './service/translation.service';
-import {AnimationService} from './service/animation.service';
+import {ScrollService} from './service/scroll.service';
 
 import { TranslatePipe } from './translation/translate.pipe';
 import { ChangeLanguageComponent } from './change-language/change-language.component';
 import { ScrollTopComponent } from './main/scroll-top/scroll-top.component';
-
-const appRoutes: Routes = [
-  { path: '', component: MainComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'label', component: CategoriesContentComponent },
-  { path: '**', component: NotFoundComponent }
-];
 
 @NgModule({
   declarations: [
@@ -69,6 +63,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
     FormsModule
@@ -77,7 +72,7 @@ const appRoutes: Routes = [
     ContentService,
     CartService,
     TranslationService,
-    AnimationService
+    ScrollService
   ],
   bootstrap: [AppComponent]
 })
