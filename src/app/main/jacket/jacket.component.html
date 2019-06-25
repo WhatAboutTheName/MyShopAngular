@@ -5,6 +5,6 @@
         <h4>{{'MEN’S' | translate}}</h4>
         <strong class="price">${{jacket.price}}</strong>
         <input type="number" name="amount" class="input-amount" [(ngModel)]="amount">
-        <button (click)="addProduct()" type="button" class="add-cart" id='{{jacket.id}}'>{{'In cart' | translate}}</button>
+        <button mat-raised-button color="accent" (click)="addProduct()" id='{{jacket.id}}'>{{'In cart' | translate}}</button>
     </div>
 </div>

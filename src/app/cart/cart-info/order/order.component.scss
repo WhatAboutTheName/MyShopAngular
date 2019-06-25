@@ -60,14 +60,14 @@
         
     }
     .button { 
-        button{
-            width: 80px;
+        .mat-raised-button{
             height: 32px;
+            min-width: 80px;
             background-color: #8b0000;
-            border: 10px;
-            cursor: pointer;
-            color: #fff;
+            line-height: 0px;
+            padding: 0px;
             border-radius: 10px 10px 10px 10px;
+            margin-left: 3px;
         }
         
         input{
@@ -78,6 +78,7 @@
             cursor: pointer;
             color: #fff;
             border-radius: 10px 10px 10px 10px;
+            font-size: 14px;
         }
     }
 }

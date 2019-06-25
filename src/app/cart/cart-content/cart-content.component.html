@@ -1,5 +1,5 @@
 <ul class="product-in-cart" >
-    <li *ngFor="let jacket of cartService.cartHtmlObj">
+    <li *ngFor="let jacket of cartService.cartHtmlObj" [@remove]>
         <app-cart-jacket [jacket]="jacket" (add)="apply($event)"></app-cart-jacket>
     </li>
 </ul>

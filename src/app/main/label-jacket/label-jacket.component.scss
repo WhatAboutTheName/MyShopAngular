@@ -20,13 +20,8 @@
 
         .add-cart {
             margin-left: 5px;
-            width: 60px;
-            height: 25px;
-            color: #fff;
             background-color: #8b0000;
-            border: 0px;
-            cursor: pointer;
-            border-radius: 5px 5px 5px 5px;
+            padding: 0px;
         }
 
         .input-amount {
@@ -34,6 +29,14 @@
         }
     }
 
+}
+
+.img {
+    transition: 1s; 
+    display: block; 
+}
+img:hover {
+    transform: scale(1.2);
 }
 
 input[type=number]::-webkit-inner-spin-button,

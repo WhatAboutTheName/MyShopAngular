@@ -1,8 +1,10 @@
 .cart-info {
     float: left;
     margin-left: 100px;
+    margin-top: 5px;
     border: solid 1px #dedede;
-    width: 180px;
+    min-width: 210px;
+    height: 210px;
     border-radius: 4px 4px 15px 15px;
 
     h1 {
@@ -10,6 +12,7 @@
         background: #8b0000;
         color: #fff;
         border-radius: 4px 4px 0px 0px;
+        font-size: xx-large;
     }
 
     .cart-info-price {
@@ -32,28 +35,21 @@
     }
 
     .button {
-        padding: 5px;
-        margin-left: 7px;
+        margin-top: 5px;
+        margin-left: 5px;
     }
     
-    .place-cart{
-        width: 90px;
-        height: 32px;
+    .mat-raised-button{
+        margin-top: 2px;
+        height: 25px;
+        min-width: 30px;
         background-color: #8b0000;
-        border: 0px;
-        cursor: pointer;
-        color: #fff;
-        border-radius: 10px 10px 10px 10px;
+        line-height: 0px;
+        padding: 0px;
     }
 
     .remove-all{
-        width: 60px;
-        height: 32px;
-        background-color: #8b0000;
-        border: 0px;
-        cursor: pointer;
-        color: #fff;
-        border-radius: 10px 10px 10px 10px;
+        margin-left: 3px;
     }
 
     .plase-order {

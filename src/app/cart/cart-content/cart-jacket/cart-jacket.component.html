@@ -5,8 +5,8 @@
         <h4 *ngIf="!cartService.flagChange">{{'Amount' | translate}}:{{jacket.amount}}</h4>
         <input type="number" name="amount" class="change-input" *ngIf="cartService.flagChange" [(ngModel)]="amount">
         <strong class="cart-price">{{'Price' | translate}}{{jacket.amount * jacket.price}}</strong>
-        <button type="button" class="remove-cart" id='{{jacket.id}}' (click)="remove(jacket.id)">{{'Delete' | translate}}</button>
-        <button type="button" class="change" id='{{jacket.id}}' *ngIf="!cartService.flagChange" (click)="apply()">{{'Change' | translate}}</button>
-        <button type="button" class="change" id='{{jacket.id}}' *ngIf="cartService.flagChange" (click)="apply()">{{'Apply' | translate}}</button>
+        <button mat-raised-button color="warn" class="remove" (click)="remove(jacket.id)" id='{{jacket.id}}'>{{'Remove' | translate}}</button>
+        <button mat-raised-button color="warn" class="apply" (click)="apply()" *ngIf="!cartService.flagChange" id='{{jacket.id}}'>{{'Change' | translate}}</button>
+        <button mat-raised-button color="warn" class="apply" (click)="apply()" *ngIf="cartService.flagChange" id='{{jacket.id}}'>{{'Apply' | translate}}</button>
     </div>
   </div>

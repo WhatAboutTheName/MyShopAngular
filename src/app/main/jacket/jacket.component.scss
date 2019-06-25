@@ -18,15 +18,12 @@
         background: url(../../../assets/img/info.png);
         width: 145px;
 
-        .add-cart {
+        .mat-raised-button {
+            height: 35px;
+            width: 53px;
             margin-left: 5px;
-            width: 60px;
-            height: 25px;
-            color: #fff;
             background-color: #8b0000;
-            border: 0px;
-            cursor: pointer;
-            border-radius: 5px 5px 5px 5px;
+            padding: 0px;
         }
 
         .input-amount {

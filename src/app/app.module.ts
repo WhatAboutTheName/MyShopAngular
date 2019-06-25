@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { RouterModule }  from '@angular/router';
 import { appRoutes } from './app-routing.module';
+import {MatButtonModule} from '@angular/material';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -66,7 +67,8 @@ import { ScrollTopComponent } from './main/scroll-top/scroll-top.component';
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule
   ],
   providers: [
     ContentService,

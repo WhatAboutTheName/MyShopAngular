@@ -17,3 +17,12 @@ export const routerTransition = trigger('routeAnimations', [
     ])
   ])
 ]);
+
+export const removeAnimation = trigger('remove', [
+  transition('* => void', [
+    animate('0.3s', style({
+      opacity: 0,
+      transform: 'scale(0)'
+    }))
+  ])
+]);

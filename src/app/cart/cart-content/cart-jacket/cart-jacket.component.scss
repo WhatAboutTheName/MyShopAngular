@@ -6,6 +6,7 @@ img{
 .cart-product-info { 
     position: absolute; 
     width: 140px; 
+    max-height: 212px;
     top: 130px; 
 
     h3 { 
@@ -15,9 +16,9 @@ img{
     }
 
     .cart-product-i{ 
-        padding: 10px;
+        padding: 5px;
         background: url(../../../../assets/img/info.png);
-        width: 120px;
+        width: 130px;
         
         h4 {
             font-weight: normal;
@@ -27,32 +28,39 @@ img{
             width: 100px;
         }
 
-        .remove-cart{
-            width: 55px;
+        .remove{
+            margin-top: 2px;
             height: 25px;
+            min-width: 28px;
+            max-width: 58px;
             background-color: #8b0000;
-            border: 0px;
-            cursor: pointer;
-            color: #fff;
-            border-radius: 5px 5px 5px 5px;
+            line-height: 0px;
+            padding: 0px;
+            position: sticky;
+            top: 0;
         }
 
-        .change{
-            margin-left: 5px;
-            width: 55px;
+        .apply{
+            margin-top: 2px;
             height: 25px;
+            min-width: 28px;
+            max-width: 65px;
             background-color: #8b0000;
-            border: 0px;
-            cursor: pointer;
-            color: #fff;
-            border-radius: 5px 5px 5px 5px;
+            line-height: 0px;
+            padding: 0px;
+            position: sticky;
+            top: 0;
+        }
+        .apply{
+            margin-left: 3px;
         }
     }
 }
 
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
--webkit-appearance: none;
-margin: 0;
+.img {
+    transition: 1s; 
+    display: block; 
+}
+img:hover {
+    transform: scale(1.2);
 }

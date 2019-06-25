@@ -4,8 +4,8 @@
     <div class="product-i">
         <h4>{{'MEN’S' | translate}}</h4>
         <strong class="price">${{jacket.price}}</strong>
-        <input type="number" class="input-amount" [(ngModel)]="amount">
-        <button (click)="addProduct()" type="button" class="add-cart" id='{{jacket.id}}'>{{'In cart' | translate}}</button>
+        <input type="number" name="amount" class="input-amount" [(ngModel)]="amount">
+        <button mat-raised-button color="accent" (click)="addProduct()" class="add-cart" id='{{jacket.id}}'>{{'In cart' | translate}}</button>
     </div>
 </div>
 

@@ -7,6 +7,7 @@ import { CartService } from '../service/cart.service';
   templateUrl: './change-language.component.html',
   styleUrls: ['./change-language.component.scss']
 })
+
 export class ChangeLanguageComponent implements OnInit {
 
   @ViewChild('language', {static: false}) Text: ElementRef;

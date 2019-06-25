@@ -16,25 +16,38 @@
             padding-left: 18px;
         }
     }
+
+    #navigation ul li a.active,
+    #navigation ul li a:hover{ 
+        background:#fff;
+        color:#8b0000; 
+    }
     
     #navigation{
         float: right;
         
         ul li{
-            float: left;
             display: inline; 
             list-style-type: none;
-            height: 64px;
             font-weight: bold;
         
-        
             a{ 
+                float: left;
                 height: 64px; 
                 color: #fff;
                 padding: 0 15px;
                 line-height: 64px;
                 text-decoration: none;
             }
+
         }
+
+        // ul:hover{
+        //     background-color: #fff;
+        //     a:hover{
+        //         color: #8b0000;
+        //     }
+        // }
+
     }
 }
