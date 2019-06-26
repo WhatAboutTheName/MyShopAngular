@@ -34,6 +34,7 @@ import {ContentService} from './service/content.service';
 import {CartService} from './service/cart.service';
 import {TranslationService} from './service/translation.service';
 import {ScrollService} from './service/scroll.service';
+import {GameService} from './service/game.service';
 
 import { TranslatePipe } from './translation/translate.pipe';
 import { ChangeLanguageComponent } from './change-language/change-language.component';
@@ -74,7 +75,8 @@ import { ScrollTopComponent } from './main/scroll-top/scroll-top.component';
     ContentService,
     CartService,
     TranslationService,
-    ScrollService
+    ScrollService,
+    GameService
   ],
   bootstrap: [AppComponent]
 })
