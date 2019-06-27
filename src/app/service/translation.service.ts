@@ -43,7 +43,14 @@ export class TranslationService {
                 'EnterNumber': 'Введите ваш номер телефона',
                 'WrongNumber': 'Неправильный номер',
                 'IncorrectName': 'Неправильное имя',
-                'RequestAccepted': 'Запрос принимается'
+                'RequestAccepted': 'Запрос принимается',
+                'Start': 'Старт',
+                'Jump': 'Прыжки',
+                'where': 'Где я',
+                'about0': 'На My Shop – модной платформе распродаж.',
+                'about1':'Наша гордость – больше 1000 брендов без переплат.',
+                'about2':'Здесь огромный выбор одежды и аксессуаров для взрослых и детей всегда со скидками до 90%.',
+                'about3':'Но вы найдете в My Shop и косметику, и симпатичные вещи для дома.'
             }
         },
         'eng' : {
@@ -74,7 +81,14 @@ export class TranslationService {
                 'EnterNumber': 'Enter your phone number',
                 'WrongNumber': 'WrongNumber',
                 'IncorrectName': 'Incorrect name',
-                'RequestAccepted': 'Request is accepted'
+                'RequestAccepted': 'Request is accepted',
+                'Start': 'Start',
+                'Jump': 'Jump',
+                'where': 'Where am I',
+                'about0': 'On My Shop – fashionable platform sales.' ,
+                'about1': 'We are proud of our more than 1,000 brands overpayments.',
+                'about2': 'There is a huge selection of clothing and accessories for adults and children always with discounts up to 90%.',
+                'about3': 'But you will find in My Shop both cosmetics, and nice things for the house.'
 
             }
         }

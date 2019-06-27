@@ -1,6 +1,6 @@
 <div>
-  <h4 class="start" (click)="start()" *ngIf="gameService.flagStart">Start</h4>
-  <h4 class="start" (click)="start()" *ngIf="!gameService.flagStart">Jump: {{gameService.successJump}}</h4>
+  <h4 class="start" (click)="start()" *ngIf="gameService.flagStart">{{'Start' | translate}}</h4>
+  <h4 class="start" (click)="start()" *ngIf="!gameService.flagStart">{{'Jump' | translate}}: {{gameService.successJump}}</h4>
   <div class="plaer" [@plaer] = "gameService.jumpEvent"></div>
   <div class="triangle" [@triangle] = "gameService.triangleGo"></div>
   <div class="triangleFast" [@triangleFast] = "gameService.triangleFastGo"></div>

@@ -55,7 +55,7 @@ export class GameService{
             setTimeout( t => this.triangleGo = 'go', 1800);
             setTimeout( t => this.triangleGo = 'wait', 3600);
             setTimeout( t => this.go(), 3600);
-        } if(this.successJump >= 1){
+        } if(this.successJump >= 10){
             setTimeout( t => this.triangleFastGo = 'go', 1000);
             setTimeout( t => this.triangleFastGo = 'wait', 2000);
         }
@@ -66,7 +66,7 @@ export class GameService{
             setTimeout( t => this.triangleDivLeft(), 1);
             setTimeout( t => this.check(), 1);
         } 
-        if(this.successJump >= 1){
+        if(this.successJump >= 10){
             setTimeout( t => this.triangleFastDivLeft(), 1);
         }
     }
