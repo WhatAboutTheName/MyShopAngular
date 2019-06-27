@@ -3,6 +3,6 @@
   <h4 class="start" (click)="start()" *ngIf="!gameService.flagStart">Jump: {{gameService.successJump}}</h4>
   <div class="plaer" [@plaer] = "gameService.jumpEvent"></div>
   <div class="triangle" [@triangle] = "gameService.triangleGo"></div>
-  <!-- <div class="triangle" [@triangle] = "gameService.secondTriangleGo"></div> -->
+  <div class="triangleFast" [@triangleFast] = "gameService.triangleFastGo"></div>
   <div class="road"></div>
 </div>

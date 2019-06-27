@@ -51,6 +51,22 @@ export const triangleStart = trigger('triangle', [
   ])
 ]);
 
+export const triangleFastStart = trigger('triangleFast', [
+  state('wait', style({ 
+    opacity: 0
+  })),
+  state('go', style({ 
+    opacity: 1
+  })),
+  transition('wait => go', [
+    animate('1s', keyframes([
+      style({opacity: 1, transform: 'translateX(-200px)', offset: 0.5}),
+      style({opacity: 1, transform: 'translateX(-550px)', offset: 0.9}),
+      style({opacity: 0, transform: 'translateX(-600px)', offset: 1})
+    ]))
+  ])
+]);
+
 export const jump = trigger('plaer', [
   state('down', style({ 
     'background-color': 'rgb(83, 214, 31)'
@@ -65,7 +81,7 @@ export const jump = trigger('plaer', [
   ]),
   transition('up => down', [
     animate('0.4s', style({
-      top: '170px',
+      top: '188px',
       transform: 'translateY(65px)'
     }))
   ])

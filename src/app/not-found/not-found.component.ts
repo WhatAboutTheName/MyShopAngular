@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { triangleStart, jump } from '../animation/animation';
+import { triangleStart, jump, triangleFastStart} from '../animation/animation';
 import { GameService } from '../service/game.service';
 
 @Component({
@@ -8,7 +8,8 @@ import { GameService } from '../service/game.service';
   styleUrls: ['./not-found.component.scss'],
   animations: [
     triangleStart,
-    jump
+    jump,
+    triangleFastStart
   ]
 })
 export class NotFoundComponent implements OnInit {
